@@ -36,9 +36,5 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 echo "Host : $SUB_DOMAIN"
 
 # / / Make Main Directory
-mkdir -p /etc/xray/
-mkdir -p /etc/xray/core/
-mkdir -p /etc/xray/log/
-mkdir -p /etc/xray/config/
 echo "$SUB_DOMAIN" >/etc/xray/domain.conf
 rm -f /root/cf.sh
