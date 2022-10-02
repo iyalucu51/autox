@@ -1,0 +1,24 @@
+function dominasi() {
+clear
+echo ""
+echo " 1). Manual Domain Input
+2).  Use The Default Domain"
+echo " Choose a number before starting the installation"
+read - p " [1-2 select number] nomisi
+case $nomisi in
+echo ""
+1)
+cf
+;;
+2)
+clear
+read -rp "Input ur domain : " -e hostname
+echo "$hostname" >/etc/xray/domain.conf
+echo " Successfully input Domain, Please waiting ..."
+;;
+*)
+echo "wrong choice, please correct again & update domain manually"
+dominasi
+;;
+esac
+}
